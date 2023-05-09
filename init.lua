@@ -1,3 +1,41 @@
+minetest.clear_registered_biomes()
+minetest.clear_registered_decorations()
+
+minetest.register_biome({
+	name = "grass",
+	node_top = "default:dirt_with_grass",
+	depth_top = 1,
+	node_filler = "default:dirt",
+	depth_filler = 3,
+	node_riverbed = "default:dirt",
+	depth_riverbed = 2,
+	node_dungeon = "default:cobble",
+	node_dungeon_alt = "default:mossycobble",
+	node_dungeon_stair = "stairs:stair_cobble",
+	y_max = 31000,
+	y_min = 1,
+	heat_point = 50,
+	humidity_point = 50,
+})
+
+minetest.register_biome({
+	name = "ocean",
+	node_top = "default:dirt",
+	depth_top = 1,
+	node_filler = "default:dirt",
+	depth_filler = 3,
+	node_riverbed = "default:dirt",
+	depth_riverbed = 2,
+	node_cave_liquid = {"default:water_source", "default:lava_source"},
+	node_dungeon = "default:cobble",
+	node_dungeon_alt = "default:mossycobble",
+	node_dungeon_stair = "stairs:stair_cobble",
+	y_max = 0,
+	y_min = -31000,
+	heat_point = 50,
+	humidity_point = 50,
+})
+
 local plants = {
 	"default:sapling",
 	"default:junglesapling",
